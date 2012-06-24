@@ -56,10 +56,10 @@ print_r($data);
  * Our toolbelt
  */
 
-function swappositions($data, $left, $right) { // Beispielhaft der erste Durchlauf: 0 1 bzw. 8 4
-	$backup_old_data_right_value = $data[$right]; // tmp = 4
-	$data[$right] = $data[$left]; // Die Reihe wird 8,8,1,9,5 ... usw => Rechter Part wird ersetzt durch linken Part
-	$data[$left] = $backup_old_data_right_value; // Jetzt ist's 4,8,1,9,5 ... usw => Linker Part wird ersetzt mit altem rechten Part
+function swappositions($data, $left, $right) {
+	$backup_old_data_right_value = $data[$right];
+	$data[$right] = $data[$left];
+	$data[$left] = $backup_old_data_right_value;
 	return $data;
 }
 
